@@ -28,10 +28,10 @@
 
  <!--******************* CDN LINK************************ -->
     <!-- this link for core react  -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> -->
     <!-- this link for the brige to connect to the browser -->
     <!-- why there are two link because the react work with differnt way not only with the dom -->
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
 
 
     <!-- <script>
@@ -41,7 +41,20 @@
         const root= ReactDOM.createRoot(document.getElementById("root"));
         root.render(heading);
     </script> -->
-    <script src="./App.js"></script>
+
+
+
+
+
+    <!-- 
+    when we install the react and react-dom using the npm 
+    so we need to import the react and react file the the node modules.
+    but the browser give the error 
+    browser script cannot have import and export 
+    to solve this we need to add attribute in script link type="module"
+     -->
+    <script type="module" src="./App.js"></script>
+
 </body>
 
 </html>

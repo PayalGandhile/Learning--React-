@@ -1,3 +1,7 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+
 // **************Create an Element h1 Tag inside React**************** 
 const Heading = React.createElement("h1",
     { id: "heading" },
@@ -42,13 +46,13 @@ so we create an array of third agrument
 
 */
 
-// const parent = React.createElement("div",
-//     { id: "parent" },
-//     React.createElement("div",
-//         { id: "child" }, [React.createElement("h1", {}, "I am h1 Tag"),
-//         React.createElement("h2", {}, "I am h2 Tag")]
-//     ),
-// )
+const parent = React.createElement("div",
+    { id: "parent" },
+    React.createElement("div",
+        { id: "child" }, [React.createElement("h1", {}, "I am h1 Tag"),
+        React.createElement("h2", {}, "I am h2 Tag")]
+    ),
+)
 
 
 
@@ -69,16 +73,16 @@ so we create an array of third agrument
 
 
 
-const parent = React.createElement("div", { id: "parent" }, [
-    React.createElement("div", { id: "child" },
-        [React.createElement("h1", {}, " I am h1 Tag"),
-        React.createElement("h2", {}, "I am h2 Tag ")
-        ]),
-    React.createElement("div", { id: "child2" },
-        [React.createElement("h1", {}, "I am h1 Tag "),
-        React.createElement("h2", {}, "I am h2 Tag ")
-        ])
-])
+// const parent = React.createElement("div", { id: "parent" }, [
+//     React.createElement("div", { id: "child" },
+//         [React.createElement("h1", {}, " I am h1 Tag"),
+//         React.createElement("h2", {}, "I am h2 Tag ")
+//         ]),
+//     React.createElement("div", { id: "child2" },
+//         [React.createElement("h1", {}, "I am h1 Tag "),
+//         React.createElement("h2", {}, "I am h2 Tag ")
+//         ])
+// ])
 console.log(parent);// it is an object 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

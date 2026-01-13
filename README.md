@@ -1,0 +1,18 @@
+# parcel
+- Dev bulid
+- Local server
+- HRM - Hot Module Replacement 
+- File Watching Algorithm - Written in c++
+- caching - Faster Builds
+- Image Optimization
+- Minification
+- Bundling
+- Compress 
+- Consistant Hashing
+- Code Splitting
+- Differential Bundling - Support Older Browser
+- Tree Shaking - Remove unused code
+- HHTPs
+- Error Handling
+- Diagonostic
+- Different Dev and production bundles
