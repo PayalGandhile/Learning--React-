@@ -1,90 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-
-// **************Create an Element h1 Tag inside React**************** 
-const Heading = React.createElement("h1",
-    { id: "heading" },
-    "Hello React"
+// React Element
+const jsxHeading = (
+  <h3 id="heading" className="head">
+    Namsate React using the JSX
+  </h3>
 );
 
-console.log(Heading); // it is an object 
-// const root = ReactDOM.createRoot(document.getElementById("root"));
+//React functional component
+// The function that return jsx called the functional component.
+// both function are the same 
 
-/*the render function are used the to take this object and make it the
- heading tag and put inside the the dom.
-*/
-// root.render(Heading);
-
-
-
-// ****************************Create nested React Elements************
-
-/**
- * how make a nested structure usign the react
- * 
- * the React.createElement() take three argument 
-    first is tag name second is attribute and third one is the data should be inside in that tag
-    so  when we create a nested dom so we want to get tag inside the tag so 
-    to create the nested dom so we take third argument of createElement() as an another createElement()
- * 
- * 
- * 
- * like
- * <div id="parent">
-        <div id="child">
-            <h1>I am h1 Tag</h1>
-        </div>
-    </div>
- */
-/*when we add the sibling in tag like
- <div id="child">
-        <h1>I am h1 Tag</h1>
-        <h>I am h2 Tag</h2>
-</div>
-so we create an array of third agrument 
-
-*/
-
-const parent = React.createElement("div",
-    { id: "parent" },
-    React.createElement("div",
-        { id: "child" }, [React.createElement("h1", {}, "I am h1 Tag"),
-        React.createElement("h2", {}, "I am h2 Tag")]
-    ),
-)
+// const HeadingComponent = () => {
+//   return <h1 className="Heading"> This is the functional component with return keyword</h1>
+// }
 
 
-
-/**
- * like
- * <div id="parent">
-        <div id="child">
-            <h1>I am h1 Tag</h1>
-            <h>I am h2 Tag</h2>
-        </div>
-         <div id="child2">
-            <h1>I am h1 Tag</h1>
-            <h>I am h2 Tag</h2>
-        </div>
-    </div>
-
- */
+const Title = () => (<h1>let render it in the HeadingComponent2</h1>);
+const HeadingComponent2 = () => (
+  <div className="container">
+    {/* reactCompnet in the component or way to write it*/}
+    <Title />
+    <Title></Title>
+    {Title()};
+    <h1 className="Heading"> This is the functional component without return keyword</h1>
+  </div>
+);
 
 
-
-// const parent = React.createElement("div", { id: "parent" }, [
-//     React.createElement("div", { id: "child" },
-//         [React.createElement("h1", {}, " I am h1 Tag"),
-//         React.createElement("h2", {}, "I am h2 Tag ")
-//         ]),
-//     React.createElement("div", { id: "child2" },
-//         [React.createElement("h1", {}, "I am h1 Tag "),
-//         React.createElement("h2", {}, "I am h2 Tag ")
-//         ])
-// ])
-console.log(parent);// it is an object 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(parent);
+root.render(<HeadingComponent2 />)
+// root.render(jsxHeading);
