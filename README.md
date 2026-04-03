@@ -18,3 +18,13 @@
 - **Different Dev and production bundles**
 
 
+# Babel 
+- Babel is a JavaScript compiler.
+- often more accurately called a transpiler
+- **JSX and React Support:** Babel is essential for React development because it converts JSX (JavaScript XML) into standard React.createElement calls that browsers can execute.
+
+# JSX(JavaScript XML)
+- HTML-like Syntax
+- Uses camelCase for attributes (e.g., className instead of class)
+- JSX expressions must have a single root element, often wrapped in a <div> or a React Fragment <>...</> or(...).
+- Browsers do not understand JSX; it is compiled into React elements before rendering;
