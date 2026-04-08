@@ -1,4 +1,5 @@
 # parcel
+
 - **Dev bulid**
 - **Local server** - A private, local network environment on a computer used to test and develop websites or apps without hosting them online
 - **HRM - Hot Module Replacement** - Exchanges, adds, or removes modules while an application is running without a full page reload
@@ -7,7 +8,7 @@
 - **Image Optimization**
 - **Minification**
 - **Bundling**
-- **Compress** 
+- **Compress**
 - **Consistant Hashing**
 - **Code Splitting**
 - **Differential Bundling** - Support Older Browser
@@ -17,14 +18,59 @@
 - **Diagonostic** - describe errors and warnings in a Format-independent way.
 - **Different Dev and production bundles**
 
+# Babel
 
-# Babel 
 - Babel is a JavaScript compiler.
 - often more accurately called a transpiler
 - **JSX and React Support:** Babel is essential for React development because it converts JSX (JavaScript XML) into standard React.createElement calls that browsers can execute.
 
 # JSX(JavaScript XML)
+
 - HTML-like Syntax
 - Uses camelCase for attributes (e.g., className instead of class)
 - JSX expressions must have a single root element, often wrapped in a <div> or a React Fragment <>...</> or(...).
-- Browsers do not understand JSX; it is compiled into React elements before rendering;
+- Browsers do not understand JSX; it is compiled into React elements before rendering.
+
+# Functional Component
+
+- React functional component are function that return JSX code or React Element.
+- The component name always start with the capital letter.
+- Render one component to another called the component composition.
+- why to write a component in another component
+  - <component_name/>
+  - <component_name></component_name>
+  - {component_name()}
+
+# Props
+
+- Short form for properties.
+- To dynamically send data to a component we use props.
+- Passing a prop to a component is like passing an argument to a function
+
+# Config Driven UI.
+- It allows developers to create user interface based on a configuration file or data structure
+such as JSON file or TypeScript file 
+- It change the interface accoording to the configuration file or data structure like (color design etc.)
+
+# key (Reserved Word)
+- Unique Key id while using map
+- Each item in the list must be uniquely identified
+- Note* Never use index as keys in map. It is not recommended.
+
+/\*\*
+
+- Header
+- -Logo
+- -Nav Item
+- Body
+- -Search
+- -ReastaurantContainer
+-        -ReastaurantCard
+-          -Image
+-          - Name of Reastaurant, Star Rating, Cuisine,
+- Footer
+- -copyright
+- -links
+- -Address
+- -contact
+  \*/
