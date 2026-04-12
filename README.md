@@ -57,7 +57,47 @@ such as JSON file or TypeScript file
 - Each item in the list must be uniquely identified
 - Note* Never use index as keys in map. It is not recommended.
 
-/\*\*
+# React Hook
+- It's simply a regular JavaScript function.
+- These pre-built functions
+- Two crucial hooks we frequently utilize are:
+  1. useState()
+  2. useEffect()
+
+# useState()
+- when we want to used it we have to import as a named import from ‘react’.
+- It help to create a **state variable**
+
+# state variable
+- state variable return an array with two items. The current state value and setter function to update
+- syntax : const [state, setstate] = useState(initialValue);
+- **state** is a **state variable** and **setstate** is the **setter function**.
+- whenever the state variable update react re-render the componet.
+
+# virtual DOM
+- It is the memory javascript representation of the actual DOM used by framework like react and vue to optimize react rendering.
+- It like ocject of the actual DOM.
+
+# Reconciliation 
+- It is the process React used to update user interface (UI) efficiently.
+- something change in UI that known as the Reconciliation.
+
+# diffing algorithm (diff algorithm)
+- It core of Reconciliation 
+- It compare new virtual DOM with the previous version (old virtual DOM) to identify exactly what changed.
+- It compare both old and new virtual DOM and re-render the update.
+
+
+# why there are two value in the useState
+- the first value represent the old virtual DOM and second represent new virtual DOM
+- where the diff algorithm work and re-render the update.
+
+# React Fiber
+React Fiber is the core reconciliation engine introduced in React 16. It is a complete rewrite of React's internal algorithm designed to improve rendering performance and responsiveness
+
+
+
+\*\*
 
 - Header
 - -Logo
@@ -73,4 +113,4 @@ such as JSON file or TypeScript file
 - -links
 - -Address
 - -contact
-  \*/
+\*

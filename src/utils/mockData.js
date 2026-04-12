@@ -1,4 +1,4 @@
-const resList = [
+const ListOfRestaurant = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     info: {
@@ -1388,4 +1388,4 @@ const resList = [
   },
 ];
 
-export default resList;
+export default ListOfRestaurant;
