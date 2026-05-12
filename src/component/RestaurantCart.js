@@ -9,8 +9,8 @@ const RestaurantCart = (props) => {
     avgRating,
     cuisines,
     locality,
-    sla: { slaString },
-  } = resData?.info;
+    sla,
+  } = resData;
   return (
     <div className="resCard">
       <div className="resLogo">
@@ -20,7 +20,7 @@ const RestaurantCart = (props) => {
         <h3 className="resName">{name}</h3>
         <div className="resMeta">
           <span className="rating"> {avgRating} Star</span>
-          <span className="time">{slaString} </span>
+          <span className="time">{sla ?.slaString} </span>
         </div>
         <h5 className="cuisines">{cuisines.join(", ")}</h5>
         <div className="locality">{locality} </div>

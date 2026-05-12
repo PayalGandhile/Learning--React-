@@ -1,31 +1,63 @@
 import RestaurantCart from "./RestaurantCart";
-import ListOfRestaurant from "../utils/mockData";
-import { useState } from "react";
+import Shimmer from "./Shimmer";
+// import ListOfRestaurant from "../utils/mockData";
+import { useState, useEffect } from "react";
 
 const Body = () => {
-  let [ResList, setResList] = useState(ListOfRestaurant);
+  // const restaurants = ListOfRestaurant[0].data.cards
+  //   .filter((item) => item?.card?.card?.info)
+  //   .map((item) => item.card.card.info);
 
-  return (
+  let [resList, setResList] = useState([]);
+  // console.log(resList);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.6782865&lng=73.89503359999999&collection=83655&tags=layout_CCS_Cake&sortBy=&filters=&type=rcv2&offset=0&page_type=null",
+    );
+    const json = await data.json();
+    // console.log(json);
+
+    const restaurants = json.data.cards
+      ?.filter((item) => item?.card?.card?.info)
+      ?.map((item) => item.card.card.info);
+
+    setResList(restaurants);
+  };
+
+  // conditional rendering
+  // if (resList.length === 0) {
+  //   return <Shimmer/>
+  // }
+
+
+  // here only used the ternary operator 
+  return resList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
           className="filter-btn"
           onClick={() => {
-            const filterList = ResList.filter((res) => res.info.avgRating > 4);
+            const filterList = resList.filter((res) => res.avgRating > 4);
+
             setResList(filterList);
-            {
-              console.log(filterList);
-            }
           }}
         >
           Top Rated Restaurant
         </button>
       </div>
+
       <div className="resContainer">
         {/* <RestaurantCart resData={ResList[0]} /> */}
-        {ResList.map((restaurant) => (
-          <RestaurantCart key={restaurant.info.id} resData={restaurant} />
-        ))}
+        {resList.map((restaurant) => {
+          return <RestaurantCart key={restaurant.id} resData={restaurant} />;
+        })}
       </div>
     </div>
   );
