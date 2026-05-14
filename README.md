@@ -48,16 +48,19 @@
 - Passing a prop to a component is like passing an argument to a function
 
 # Config Driven UI.
+
 - It allows developers to create user interface based on a configuration file or data structure
-such as JSON file or TypeScript file 
+  such as JSON file or TypeScript file
 - It change the interface accoording to the configuration file or data structure like (color design etc.)
 
 # key (Reserved Word)
+
 - Unique Key id while using map
 - Each item in the list must be uniquely identified
-- Note* Never use index as keys in map. It is not recommended.
+- Note\* Never use index as keys in map. It is not recommended.
 
 # React Hook
+
 - It's simply a regular JavaScript function.
 - These pre-built functions
 - Two crucial hooks we frequently utilize are:
@@ -65,37 +68,63 @@ such as JSON file or TypeScript file
   2. useEffect()
 
 # useState()
+
 - when we want to used it we have to import as a named import from ‘react’.
 - It help to create a **state variable**
 
 # state variable
+
 - state variable return an array with two items. The current state value and setter function to update
 - syntax : const [state, setstate] = useState(initialValue);
 - **state** is a **state variable** and **setstate** is the **setter function**.
 - whenever the state variable update react re-render the componet.
 
 # virtual DOM
+
 - It is the memory javascript representation of the actual DOM used by framework like react and vue to optimize react rendering.
 - It like ocject of the actual DOM.
 
-# Reconciliation 
+# Reconciliation
+
 - It is the process React used to update user interface (UI) efficiently.
 - something change in UI that known as the Reconciliation.
 
 # diffing algorithm (diff algorithm)
-- It core of Reconciliation 
+
+- It core of Reconciliation
 - It compare new virtual DOM with the previous version (old virtual DOM) to identify exactly what changed.
 - It compare both old and new virtual DOM and re-render the update.
 
-
 # why there are two value in the useState
+
 - the first value represent the old virtual DOM and second represent new virtual DOM
 - where the diff algorithm work and re-render the update.
 
 # React Fiber
+
 React Fiber is the core reconciliation engine introduced in React 16. It is a complete rewrite of React's internal algorithm designed to improve rendering performance and responsiveness
 
+# Monolithic architecture
 
+Monolithic architecture is a traditional software development model where an entire application—user interface, business logic, and data access—is built, deployed, and scaled as a single, unified codebase.
+
+# Microservices architecture
+
+Microservices is an architecture where an application is divided into small, independent services that communicate over a network. Instead of one tightly coupled codebase, each service handles a specific function and can be developed and deployed separately.
+
+# useEffect()
+
+- when we want to used it we have to import as a named import from ‘react’.
+- It takes two arguments .
+  1. Callback function - That contains the code you want to run as a side effect.
+  2. Dependency Array - Tells React when to run the effect.
+- syntax useEffect(() => {}, []);
+- useEffect() is a React Hook used to handle side effects in functional components.(API calls, Timers, Event listeners, Local storage, DOM updates etc);
+
+
+
+# fetch()
+- fetch() is a JavaScript method used to make HTTP requests and get data from an API or server.
 
 \*\*
 
@@ -112,5 +141,4 @@ React Fiber is the core reconciliation engine introduced in React 16. It is a co
 - -copyright
 - -links
 - -Address
-- -contact
-\*
+- -contact \*
