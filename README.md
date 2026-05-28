@@ -119,6 +119,11 @@ Microservices is an architecture where an application is divided into small, ind
   1. Callback function - That contains the code you want to run as a side effect.
   2. Dependency Array - Tells React when to run the effect.
 - syntax useEffect(() => {}, []);
+- there are three condition of dependency array
+   - if no Dependency Array => useEffect called on every render
+   - if Dependency Array is empty => useEffect is called an initial render (just once).
+   - if Dependency Array take an argument => useEffect will called everytime when that argument is update.
+
 - useEffect() is a React Hook used to handle side effects in functional components.(API calls, Timers, Event listeners, Local storage, DOM updates etc);
 
 
